@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reset Page</title>
+<style>
+    *{padding: 0; margin:0; box-sizing: border-box; font-family: sans-serif;}
+        header{
+            font-family: 'Times New Roman', Times, serif ;
+            width:100%;
+            min-height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+            url(img/pexels-asad-photo-maldives-1024960.jpg);
+            background-size: cover;
+            position: relative;}
+    .box{
+        background: rgb(255, 255, 255);
+    width : 400px;
+    height: 350px;
+    position: absolute ;
+    top:30%;
+    right: 200px;
+    padding:0;
+    border-radius: 8px;
+        color: rgb(0, 0, 0); 
+        padding: 20px;
+        text-align: left;
+}
+
+    input[type="password"],
+    input[type="password1"],
+    input[type="password2"],
+    input[type="OTP"],
+    input[type="submit"]{
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+    background-color: orange;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color:rgb(34, 34, 34);
+    }
+    .dropdown-btn {
+      background-color: orange;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      border-radius: 5px;
+    }
+
+    
+    .dropdown-container {
+      display: none;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      width: 400px;
+      border-radius: 8px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 8px 12px;
+      text-decoration: none;
+      display: block;
+    }
+
+
+    .dropdown-btn:focus + .dropdown-container {
+      display: block;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <div class="info"><br>
+                   
+            <button class="dropdown-btn">Help
+                <i class="fa fa-caret-down"></i>
+              </button>
+              
+              <div class="dropdown-container">
+                <div id="help-content">
+                  <ul>
+                    <li>Please choose a number to call:</li>
+                    <li>+91 xxxxxxxxxx</li>
+                    <li>+91 xxxxxxxxxx</li>
+                  </ul>
+                </div>
+                        </div>
+    <div class= "box">
+        <h2 style="margin-bottom: 10px; text-align: center;">Reset Account Password</h2><br>
+    <form>
+        <label for="password">Current password:</label>
+        <input type="password" name="customer[password]" id="password" required>
+        <label for="password1">New Password:</label>
+        <input type="password1" name="customer[password]" id="password1" required>
+        <label for="password">Re-Enter New Password:</label>
+        <input type="password2" name="customer[password]" id="password2" required>
+        <input type="submit" value="Reset Password">
+    </form>
+</div>
+</body></html>

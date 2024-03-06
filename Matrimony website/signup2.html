@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGN-UP</title>
+    <style>
+
+body {
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+            url(img/couple.jpg);
+            background-size: cover;
+        font-family: 'Poppins', sans-serif;
+        
+}    
+    .box {
+        height: 450px;
+        width: 325px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 53%;
+        left:50%;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+        padding: 50px 35px;
+        
+}
+.box h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.box p {
+  font-size: 20px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.box label {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+  padding-right: 4px;
+}
+
+.box input[type="date"],
+.box input[type="email"],
+.box input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
+.box select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding-left: 4px;
+  padding-right:4px;
+}
+
+.box input[type="button"] {
+  width: 100%;
+  padding: 10px;
+  background-color: orange;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+
+</style>
+</head>
+<body>
+   
+    <div class="box">
+        <h1>SIGN-UP PAGE</h1>
+        <p>Please provide us with your details</p>
+        <form>
+          <for="dob">Date Of Birth:</label><br>
+          <input type="date" id="dob" name="dob"><br>
+          <label for="religion">Religion:</label><br>
+          <select id="religion" name="religion">
+            <option value="hindu">Hindu</option>
+            <option value="islam">Islam</option>
+            <option value="christianity">Christianity</option>
+            <option value="sikhism">Sikhism</option>
+            <option value="other">Other</option>
+          </select><br>
+          <label for="motherTongue">Mother Tongue:</label><br>
+          <select id="motherTongue" name="motherTongue">
+            <option value="hindi">Hindi</option>
+            <option value="english">English</option>
+            <option value="telugu">Telugu</option>
+            <option value="bengali">Bengali</option>
+            <option value="marathi">Marathi</option>
+            <option value="tamil">Tamil</option>
+            <option value="urdu">Urdu</option>
+            <option value="gujarati">Gujarati</option>
+            <option value="other">Other</option>
+          </select><br>
+
+         <!--- <input type="submit" value="Continue"  onclick="window.location.href='signup.html' ">-->
+          <input class="registerbutton" onclick="window.location.href='signup.html' " type="button" value="SUBMIT">
+        </form>
+      </div>
+</body>
+</html>

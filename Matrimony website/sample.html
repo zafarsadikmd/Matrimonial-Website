@@ -1,0 +1,192 @@
+<section class="pic"> 
+  <button class="pre-button"><img src="images/arrow.png" alt=""></button>
+  <button class="nxt-button"><img src="images/arrow.png" alt=""></button>
+  <div class="slide">
+      <div class="card">
+          <div class="pimg">
+              <img src="images/banner.jpg" class="pthumb" alt="">
+          </div>
+          <div class="info">
+              <h2 class="nam">name</h2>
+              <p class="desc">a short line about the cloth..</p>
+          </div>
+      </div>
+      <div class="card">
+        <div class="pimg">
+            <img src="images/banner.jpg" class="pthumb" alt="">
+        </div>
+        <div class="info">
+            <h2 class="nam">name</h2>
+            <p class="desc">a short line about the cloth..</p>
+          
+        </div>
+    </div>
+    <div class="card">
+      <div class="pimg">
+          <img src="images/banner.jpg" class="pthumb" alt="">  
+      </div>
+      <div class="info">
+          <h2 class="nam">name</h2>
+          <p class="desc">a short line about the cloth..</p>
+      </div>
+  </div>
+  <div class="card">
+    <div class="pimg">
+        <img src="images/banner.jpg" class="pthumb" alt=""> 
+    </div>
+    <div class="info">
+        <h2 class="nam">name</h2>
+        <p class="desc">a short line about the cloth..</p>
+    </div>
+ </div>
+ <div class="card">
+  <div class="pimg">
+      <img src="images/banner.jpg" class="pthumb" alt="">   
+  </div>
+  <div class="info">
+      <h2 class="nam">name</h2>
+      <p class="desc">a short line about the cloth..</p>
+  </div>
+</div>
+<div class="card">
+  <div class="pimg">
+      <img src="images/banner.jpg" class="pthumb" alt="">
+  </div>
+  <div class="info">
+      <h2 class="nam">name</h2>
+      <p class="desc">a short line about the cloth..</p>
+  </div>
+</div>
+<div class="card">
+  <div class="pimg">
+      <img src="images/banner.jpg" class="pthumb" alt="">
+  </div>
+  <div class="info">
+      <h2 class="nam">name</h2>
+      <p class="desc">a short line about the cloth..</p>
+  </div>
+</div>
+<div class="card">
+  <div class="pimg">
+      <img src="images/banner.jpg" class="pthumb" alt="">
+  </div>
+  <div class="info">
+      <h2 class="nam">name</h2>
+      <p class="desc">a short line about the cloth..</p>
+  </div>
+</div>
+<div class="card">
+  <div class="pimg">
+      <img src="images/banner.jpg" class="pthumb" alt="">
+  </div>
+  <div class="info">
+      <h2 class="nam">name</h2>
+      <p class="desc">a short line about the cloth..</p>
+  </div>
+</div>
+  </div>
+</section>
+
+<style>
+   .pic{
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  margin-top: 50px;
+}
+.slide{
+  padding: 0 10vw;
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+.slide::-webkit-scrollbar {
+  display: none;
+}
+.card{
+  flex: 0 0 auto;
+  width: 250px;
+  height: 450px;
+  margin-right: 40px;
+}
+.pimg{
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+.info{
+  width: 100%;
+  height: 100px;
+  padding-top: 10px;
+}
+.nam{
+  text-transform: uppercase;
+}
+.desc{
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  opacity: 0.5;
+  text-transform: capitalize;
+  margin: 5px 0;
+  }
+.pre-button,
+.nxt-button{
+  border: none;
+  width: 10vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+  cursor: pointer;
+  z-index: 8;
+}
+
+.pre-button {
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.nxt-button {
+  right: 0;
+}
+
+.pre-button img,
+.nxt-button img {
+  opacity: 0.2;
+}
+
+.pre-button:hover img,
+.nxt-button:hover img {
+  opacity: 1;
+}
+.p-thumb{
+    height: 100%;
+    width: 100%;
+    border-radius: 2px;
+}
+</style>
+
+<script>
+  const slide= [...document.querySelectorAll('.slide')];
+const nxtbutton = [...document.querySelectorAll('.nxt-button')];
+const prebutton = [...document.querySelectorAll('.pre-button')];
+
+slide.forEach((item, i) => {
+    let containerDimensions = item.getBoundingClientRect();
+    let containerWidth = containerDimensions.width;
+
+    nxtbutton[i].addEventListener('click', () => {
+        item.scrollLeft += containerWidth;
+    })
+
+    prebutton[i].addEventListener('click', () => {
+        item.scrollLeft -= containerWidth;
+    })
+})
+</script>

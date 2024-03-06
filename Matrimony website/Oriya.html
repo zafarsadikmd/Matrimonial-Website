@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <title>Matrimony Example</title>
+
+</head>
+
+<body>
+    
+    <div class="logo">
+        <div class="logoleft">
+            <img src="img/logo.jpg" alt="LogoImages">
+        </div>
+        <div class="logoright">
+            <h3>Already a member?</h3>
+            <a class="login" href="login.html" target="_blank"><button>Login</button></a>
+            <a class="help" href="#" target="_blank"><button>Help?</button></a>
+        </div>
+    </div>
+    <div class="htext">
+        <h4>The biggest and most trusted
+            matrimony service for <span>Oriya</span></h4>
+    </div>
+    <div class="box">
+    <section id="main">
+        <form id="registrationForm">
+            <h3 style="margin-bottom: 10px; text-align: center;">Find your perfect match</h3>
+            <select class="form-select" required name="troom" aria-label="Default select example">
+                <option selected>Matrimony Profile For</option>
+                <option value="Daughter">Daughter</option>
+                <option value="Son">Son</option>
+                <option value="Sister">Sister</option>
+                <option value="Brother">Brother</option>
+                <option value="Relative">Relative</option>
+                <option value="Friend">Friend</option>
+            </select>
+            <input type="text" name="name" placeholder="Enter Name" required>
+            <input type="tel" name="mobile" placeholder="Enter Mobile Number" required>
+            <input type="text" name="pan" placeholder="Enter PAN Details" required>
+            <p class="pan">Upload PAN Document</p><br>
+            <input type="file" name="panDocument" id="fileToUpload">
+            <input class="registerbutton" onclick="window.location.href='signup.html' " type="button" value="REGISTER HERE">
+            <br>
+            <p>*By clicking, I agree to the <span>T&C and Privacy Policy</span></p>
+        </form>
+    </section> 
+    </div>
+  <!-- <script>
+        function validateForm() {
+            var form = document.getElementById('registrationForm');
+            var inputs = form.querySelectorAll('input, select');
+            var isValid = true;
+    
+            inputs.forEach(function(input) {
+                if (!input.checkValidity()) {
+                    isValid = false;
+                    input.reportValidity();
+                }
+            });
+    
+            if (isValid) {
+                form.submit();
+            }
+        }
+    </script>
+-->
+
+
+<style>
+    * {
+    margin: 0;
+    font-family: sans-serif;
+    border: border-box;
+}
+img{
+    width: 5px;
+    height: 10px;
+    border-radius: 50px;
+}
+button{
+    width: 70px;
+    height: 35px;
+    background-color: rgb(255, 166, 0);
+    border-radius: 12px;
+    border-color: white;
+    box-shadow: none;
+
+}
+#navbar {
+    height: 50px;
+    background: #F2F4FB;
+    color: #000000;
+    padding: px;
+}
+
+li {
+    display: inline-block;
+    margin: 0 9px;
+    text-decoration: none;
+    padding-left  : 10px;
+    align-items: center;
+}
+li a:hover{
+    color:orange;
+}
+a {
+    text-decoration: none;
+    color: #000000;
+}
+.logo{
+    height: 60px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 9px;
+    /* box-shadow: inset; */
+}
+#main{
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+    url(img/ind.jpg);
+    background-size: cover;
+}
+#main form{
+    color: rgb(255, 255, 255); 
+        width: 350px;
+            background-color: rgba(255, 255, 255, 0.13);
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 70%;
+            left:32cm;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+            padding: 50px 35px;
+}
+#main form label,input,select{
+    width: 100%;
+    height: 35px;
+    margin-bottom: 20px;
+}
+input,select{
+    border-radius: 5px;
+}
+.registerbutton{
+            background-color: orange;
+            color: white;
+            border: 1px solid transparent;
+            font-weight: 800;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+        .registerbutton:hover {
+         background-color: rgb(46, 45, 45); 
+        }
+
+.logo .logoleft{
+    display: flex;
+    flex-direction: column;
+}
+.logo .logoright{
+    display: flex;
+    flex-direction: row;
+    padding: 40px;
+    gap: 20px;
+    margin-top:-15px;
+}
+.logo .logoleft img{
+    height: 80px;
+    width: 100px;
+}
+.box span{
+    color:rgb(255,165,0);
+    cursor:pointer;
+    font-size: 12px;
+    transition: 0.4s;
+}
+.box span:hover{
+    background:rgb(46, 45, 45);
+    border-radius: 5px;
+    
+}
+.htext{
+    position:absolute;
+    top:40%;
+    left:5%;
+    max-width: 600px;
+    color:white;
+}
+.htext h4{
+    font-size: 2em;
+}
+.htext span{
+    color: orange;
+}
+
+
+</style>
+</body>
+</html>
+
